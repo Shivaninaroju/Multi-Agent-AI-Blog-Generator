@@ -49,4 +49,5 @@ This system produces **two files**: `.md` and `.html`.
 - Professional typography ✨  
 - Styled headings, paragraphs, blockquotes, and code 🖋️💻  
 
-ju26@gmail.com ✉️
+
+
