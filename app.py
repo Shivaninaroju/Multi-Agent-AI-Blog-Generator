@@ -12,12 +12,6 @@ GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 topic = "Artificial Intelligence"
 crew_inputs = {"topic": topic}
 
-
-
-
-
-
-
 # Define Agents
 planner = Agent(
     llm=ChatGroq(api_key=GROQ_API_KEY, temperature=0, model="llama-3.1-8b-instant"),
@@ -50,10 +44,6 @@ editor = Agent(
     verbose=True
 )
 
-
-
-
-
 # Define Tasks
 plan_task = Task(
     description=f"""
@@ -81,11 +71,8 @@ write_task = Task(
 edit_task = Task(
     description="Polish the blog post from the Writer for grammar, clarity, structure, and professional style.",
     expected_output="The full polished blog post in markdown format.",
-    agent=editor,
+    agent=editor
 )
-
-
-
 
 # Create Crew and run tasks
 crew = Crew(
@@ -96,13 +83,6 @@ crew = Crew(
 
 # Kickoff the Crew
 final_result = crew.kickoff(inputs=crew_inputs)
-
-
-
-
-
-
-
 
 # Save Markdown
 output_dir = "outputs"
