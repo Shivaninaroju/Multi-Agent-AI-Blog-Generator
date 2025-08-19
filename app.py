@@ -9,7 +9,7 @@ load_dotenv()
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 
 # Inputs
-topic = "Retrieve all deatails about Shivani Naroju,Ex intern at scalar from linkedin and also add images"
+topic = "Artificial Intelligence"
 crew_inputs = {"topic": topic}
 
 
